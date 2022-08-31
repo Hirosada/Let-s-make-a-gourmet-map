@@ -45,3 +45,12 @@ docker-compose ps
     AllowOverride All
 <IfVersion < 2.4>Allow from all = 2.4>
     Require all granted
+
+# DB作成下記コマンド実行
+・docker-compose exec mysql bash
+・mysql -u root -p
+　(password: root)
+
+・create database gourmet_map_db;
+・show databases;
+　(確認用)
