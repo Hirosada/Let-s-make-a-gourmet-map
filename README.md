@@ -53,4 +53,5 @@ docker-compose ps
 
 ・create database gourmet_map_db;
 ・show databases;
+ SHOW TABLES FROM gourmet_map_db;
 　(確認用)
