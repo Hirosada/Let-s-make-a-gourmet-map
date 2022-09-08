@@ -1,0 +1,84 @@
+form{
+	width:300px;
+	margin:0 auto;
+}
+.inputs{
+	position: relative;
+	width: 100%;
+	margin: 40px 3%;
+	overflow: hidden;
+}
+.input_form{
+	float: left;
+	width: 100%;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	margin: 8px 0;
+	transition: 0.3s;
+	outline: none;
+	border: solid 1px #e0e0e0;
+	border-radius:5px;
+	padding:8px;
+	font-size: 15px;
+}
+textarea {
+	height: 100px;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	border-color: #FF6701;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+	padding-left: 40px;
+}
+i {
+	position: absolute;
+	top: 12px;
+	left: 0;
+	padding: 9px 8px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+input[type="text"]:focus + i,
+input[type="number"]:focus + i,
+input[type="email"]:focus + i
+input[type="password"]:focus + i,
+textarea:focus + i {
+	color: #FF6701;
+}
+.btn-area{
+	text-align: center;
+}
+input[type="submit"]{
+	background: #FF6701;
+	border: none;
+	color: #fff;
+	font-size:15px;
+	font-weight:bold;
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 10px;
+}
+input[type="reset"]{
+	background: #aaa;
+	border: none;
+	color: #fff;
+	font-size:15px;
+	font-weight:bold;
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 10px;
+}

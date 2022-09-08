@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//誰でもアクセスできる画面
+Route::group(['middleware' => 'guest'], function() {
+	Route::get('/member/register', [MemberController::class, 'register']);
+	Route::post('/member/register', [MemberController::class, 'postRegiser'])->name('post_regiser');
+});
+
+//ログインしないとアクセスできない画面
+Route::group(['middleware' => 'auth'], function () {
+
 });
