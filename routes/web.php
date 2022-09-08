@@ -17,6 +17,7 @@ use App\Http\Controllers\MemberController;
 //誰でもアクセスできる画面
 Route::group(['middleware' => 'guest'], function() {
 	Route::get('/member/register', [MemberController::class, 'register']);
+	Route::post('/member/confirm', [MemberController::class, 'confirm'])->name('confirm');
 	Route::post('/member/register', [MemberController::class, 'postRegiser'])->name('post_regiser');
 });
 

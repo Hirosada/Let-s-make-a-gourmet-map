@@ -27,7 +27,7 @@ class ContentTable extends Migration
             $table->integer('prefecture_code');
             $table->datetime('created_at');
             $table->datetime('update_at');
-            $table->datetime('delete_at');        
+            $table->datetime('delete_at');
         });
     }
 

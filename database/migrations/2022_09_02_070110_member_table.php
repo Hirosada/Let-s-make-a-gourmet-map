@@ -27,7 +27,7 @@ class MemberTable extends Migration
             $table->integer('admin_flag');
             $table->datetime('created_at');
             $table->datetime('update_at');
-            $table->datetime('delete_at');        
+            $table->datetime('delete_at');
         });
     }
 

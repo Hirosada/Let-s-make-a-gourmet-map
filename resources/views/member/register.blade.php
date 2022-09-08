@@ -1,7 +1,7 @@
 
 @extends('layouts')
 @section('contents')
-	{{ Form::open(['route' => 'post_regiser', 'method' => 'post', 'class' => 'member-form']) }}
+	{{ Form::open(['route' => 'confirm', 'method' => 'post', 'class' => 'member-form']) }}
 		<div class="inputs">
 			{{ Form::text('text', null, ['placeholder' => 'お名前', 'name' => 'member_name', 'class' => 'input_form']) }}
 			<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
@@ -9,7 +9,8 @@
 		<div class="inputs post_code">
 			{{ Form::text('text', null, ['placeholder' => '郵便番号', 'name' => 'member_postcode', 'class' => 'input_form', 'id' => 'zipcode']) }}
 			<i aria-hidden="true">〒</i>
-			<a id="zipcode_btn">住所検索</a>
+			<a id="zipcode_btn" class="btn_style">住所検索</a>
+			<input type="hidden" name="prefecture_code" id="prefecture_code" value="">
 		</div>
 		<div class="inputs">
 			{{ Form::text('text', null, ['placeholder' => '住所', 'name' => 'member_adress', 'class' => 'input_form', 'id' => 'address']) }}
@@ -32,9 +33,9 @@
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::radio('menber_gender', '1', 'true', ['class'=>'circle']) }}男
-			{{ Form::radio('menber_gender', '2', '', ['class'=>'circle']) }}女
-			{{ Form::radio('menber_gender', '3', '', ['class'=>'circle']) }}どちらでもない
+			{{ Form::radio('member_gender', '1', 'true', ['class'=>'circle']) }}男性
+			{{ Form::radio('member_gender', '2', '', ['class'=>'circle']) }}女性
+			{{ Form::radio('member_gender', '3', '', ['class'=>'circle']) }}どちらでもない
 		</div>
 		<div class="btn-area">
 			{{ Form::submit('送信', ['class'=>'submit']) }}

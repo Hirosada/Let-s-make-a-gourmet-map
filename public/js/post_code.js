@@ -14,8 +14,10 @@ $(function () {
 					for (var i = 0; i < res.results.length; i++) {
 						var result = res.results[i];
 						var addressData = result.address1 + result.address2 + result.address3;
+						var prefectureCode = result.prefcode;
 					}
 					$('#address').val(addressData);
+					$('#prefecture_code').val(prefectureCode)
 				} else {
 					$('#address').val('入力した郵便番号をご確認ください。');
 

@@ -96,7 +96,7 @@ input[type="reset"]{
 	margin-right: 20px;
 }
 
-#zipcode_btn {
+.btn_style {
 	border: 1px solid #fff;
 	padding: 10px 20px;
 	border-radius: 10px;
@@ -105,4 +105,13 @@ input[type="reset"]{
 	display: inline-block;
 	margin-top: 10px;
 	cursor: pointer;
+}
+.back_btn {
+	border: 1px solid #fff;
+	padding: 12px 20px;
+	border-radius: 10px;
+	background-color: #C0C0C0;
+	color: #000;
+	cursor: pointer;
+	font-weight: bold;
 }
