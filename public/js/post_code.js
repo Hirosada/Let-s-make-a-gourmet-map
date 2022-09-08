@@ -17,9 +17,7 @@ $(function () {
 					}
 					$('#address').val(addressData);
 				} else {
-					//エラーだった時
-					//エラー内容を表示
-					$('#address').val(res.message);
+					$('#address').val('入力した郵便番号をご確認ください。');
 
 				}
 			},

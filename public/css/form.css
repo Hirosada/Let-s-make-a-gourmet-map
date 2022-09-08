@@ -27,9 +27,13 @@ textarea {
 	padding:8px;
 	font-size: 15px;
 }
+input[type="radio"] {
+	margin-left: 30px;
+}
 textarea {
 	height: 100px;
 }
+
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
@@ -71,6 +75,7 @@ input[type="submit"]{
 	padding: 10px 20px;
 	margin: 0 10px;
 	border-radius: 10px;
+	cursor: pointer;
 }
 input[type="reset"]{
 	background: #aaa;
@@ -84,6 +89,20 @@ input[type="reset"]{
 }
 
 .post_code {
+	width: 100%;
+}
+.post_code input {
 	width: 40%;
 	margin-right: 20px;
+}
+
+#zipcode_btn {
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: #FF6701;
+	color: #fff;
+	display: inline-block;
+	margin-top: 10px;
+	cursor: pointer;
 }
