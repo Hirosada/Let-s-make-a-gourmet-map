@@ -19,6 +19,7 @@ Route::group(['middleware' => 'guest'], function() {
 	Route::get('/member/register', [MemberController::class, 'register']);
 	Route::post('/member/confirm', [MemberController::class, 'confirm'])->name('confirm');
 	Route::post('/member/register', [MemberController::class, 'postRegiser'])->name('post_regiser');
+	Route::get('/member/login', [MemberController::class, 'login']);
 });
 
 //ログインしないとアクセスできない画面

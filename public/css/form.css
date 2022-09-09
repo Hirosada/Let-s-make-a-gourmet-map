@@ -115,3 +115,9 @@ input[type="reset"]{
 	cursor: pointer;
 	font-weight: bold;
 }
+.error_message {
+	font-size: 15px;
+	color: #FF6701;
+	font-weight: 300;
+	margin-bottom: 20px;
+}

@@ -2,6 +2,15 @@
 @extends('layouts')
 @section('contents')
 	{{ Form::open(['route' => 'confirm', 'method' => 'post', 'class' => 'member-form']) }}
+		@if ($errors->any())
+			<div class="alert alert-danger mt-3">
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li class="error_message">※{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
 		<div class="inputs">
 			{{ Form::text('text', null, ['placeholder' => 'お名前', 'name' => 'member_name', 'class' => 'input_form']) }}
 			<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
@@ -29,7 +38,7 @@
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::password('password', ['placeholder' => 'パスワード確認用', 'name' => 'member_password', 'class' => 'input_form']) }}
+			{{ Form::password('password', ['placeholder' => 'パスワード確認用', 'name' => 'member_password_comfirm', 'class' => 'input_form']) }}
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">

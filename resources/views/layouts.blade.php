@@ -25,16 +25,12 @@
 							menu
 						</button>
 						<ul class="nav__wrapper">
-							<li class="nav__item"><a href="#">Home</a></li>
-							<li class="nav__item"><a href="#">About</a></li>
-							<li class="nav__item"><a href="#">Services</a></li>
-							<li class="nav__item"><a href="#">Hire us</a></li>
-							<li class="nav__item"><a href="#">Contact</a></li>
+							<li class="nav__item"><a href="#">Top</a></li>
+							<li class="nav__item"><a href="#">会員登録</a></li>
+							<li class="nav__item"><a href="{{ }}">会員専用ページ</a></li>
+							<li class="nav__item"><a href="#">いいね一覧</a></li>
 						</ul>
 					</nav>
-				</div>
-				<div class="site-header__end">
-					<a class="button" href="#">Sign in</a>
 				</div>
 			</div>
 		</header>

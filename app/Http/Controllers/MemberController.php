@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use Illuminate\Http\Request;
+use \App\Http\Requests\CreateMemberRequest;
 class MemberController extends Controller
 {
 	function __construct()
@@ -20,7 +21,7 @@ class MemberController extends Controller
 		return view('member.register');
 	}
 
-	public function confirm(Request $request) {
+	public function confirm(CreateMemberRequest $request) {
 		$gender_array = $this->gender_array;
 		return view('member.confirm', compact('request', 'gender_array'));
 	}
@@ -43,7 +44,9 @@ class MemberController extends Controller
 		$member->insertMemberData($save_data);
 
 		return view('member.complete');
+	}
 
-		dd('ok');
+	public function login() {
+		
 	}
 }
