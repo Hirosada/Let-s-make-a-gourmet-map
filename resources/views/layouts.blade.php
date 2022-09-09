@@ -27,7 +27,7 @@
 						<ul class="nav__wrapper">
 							<li class="nav__item"><a href="#">Top</a></li>
 							<li class="nav__item"><a href="#">会員登録</a></li>
-							<li class="nav__item"><a href="{{ }}">会員専用ページ</a></li>
+							<li class="nav__item"><a href="#">会員専用ページ</a></li>
 							<li class="nav__item"><a href="#">いいね一覧</a></li>
 						</ul>
 					</nav>
