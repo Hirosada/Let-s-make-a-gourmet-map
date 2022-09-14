@@ -12,39 +12,39 @@
 			</div>
 		@endif
 		<div class="inputs">
-			{{ Form::text('text', null, ['placeholder' => 'お名前', 'name' => 'member_name', 'class' => 'input_form']) }}
+			{{ Form::text('text', null, ['placeholder' => 'お名前', 'name' => 'name', 'class' => 'input_form']) }}
 			<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
 		</div>
 		<div class="inputs post_code">
-			{{ Form::text('text', null, ['placeholder' => '郵便番号', 'name' => 'member_postcode', 'class' => 'input_form', 'id' => 'zipcode']) }}
+			{{ Form::text('text', null, ['placeholder' => '郵便番号', 'name' => 'postcode', 'class' => 'input_form', 'id' => 'zipcode']) }}
 			<i aria-hidden="true">〒</i>
 			<a id="zipcode_btn" class="btn_style">住所検索</a>
 			<input type="hidden" name="prefecture_code" id="prefecture_code" value="">
 		</div>
 		<div class="inputs">
-			{{ Form::text('text', null, ['placeholder' => '住所', 'name' => 'member_adress', 'class' => 'input_form', 'id' => 'address']) }}
+			{{ Form::text('text', null, ['placeholder' => '住所', 'name' => 'address', 'class' => 'input_form', 'id' => 'address']) }}
 			<i class="fa fa-address-card f2bb" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::text('text', null, ['placeholder' => '電話番号', 'name' => 'member_phone', 'class' => 'input_form']) }}
+			{{ Form::text('text', null, ['placeholder' => '電話番号', 'name' => 'phone_number', 'class' => 'input_form']) }}
 			<i class="fa fa-phone f095" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::text('email', null, ['placeholder' => 'メールアドレス', 'name' => 'member_email', 'class' => 'input_form']) }}
+			{{ Form::text('email', null, ['placeholder' => 'メールアドレス', 'name' => 'email', 'class' => 'input_form']) }}
 			<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::password('password', ['placeholder' => 'パスワード', 'name' => 'member_password', 'class' => 'input_form']) }}
+			{{ Form::password('password', ['placeholder' => 'パスワード', 'name' => 'password', 'class' => 'input_form']) }}
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::password('password', ['placeholder' => 'パスワード確認用', 'name' => 'member_password_comfirm', 'class' => 'input_form']) }}
+			{{ Form::password('password', ['placeholder' => 'パスワード確認用', 'name' => 'password_comfirm', 'class' => 'input_form']) }}
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::radio('member_gender', '1', 'true', ['class'=>'circle']) }}男性
-			{{ Form::radio('member_gender', '2', '', ['class'=>'circle']) }}女性
-			{{ Form::radio('member_gender', '3', '', ['class'=>'circle']) }}どちらでもない
+			{{ Form::radio('gender', '1', 'true', ['class'=>'circle']) }}男性
+			{{ Form::radio('gender', '2', '', ['class'=>'circle']) }}女性
+			{{ Form::radio('gender', '3', '', ['class'=>'circle']) }}どちらでもない
 		</div>
 		<div class="btn-area">
 			{{ Form::submit('送信', ['class'=>'submit']) }}
