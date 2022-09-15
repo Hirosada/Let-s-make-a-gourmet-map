@@ -24,16 +24,18 @@ class CreateMemberRequest extends FormRequest
 	 */
 	public function rules()
 	{
+
 		return [
-			'member_name' => 'required|max:15',
-			'member_postcode' => 'required',
-			'member_adress' => 'required',
-			'member_phone' => 'required',
-			'member_email' => 'required|email',
-			'member_password' => 'required|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]){7,}^/|confirmed',
-			'member_password_comfirm' => 'required',
+			'name' => 'required|max:15',
+			'postcode' => 'required',
+			'address' => 'required',
+			'phone_number' => 'required',
+			'email' => 'required|email',
+			'password' => 'required|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]){7,}^/|confirmed',
+			'password_confirmation' => 'required',
 		];
 	}
+
 
 	/**
 	*バリデーション項目名定義
@@ -42,13 +44,13 @@ class CreateMemberRequest extends FormRequest
 	public function attributes()
 	{
 		return [
-			'member_name' => 'お名前',
-			'member_postcode' => '郵便番号',
-			'member_adress' => '住所',
-			'member_phone' => '電話番号',
-			'member_email' => 'メールアドレス',
-			'member_password' => 'パスワード',
-			'member_password_comfirm' => 'パスワード確認用',
+			'name' => 'お名前',
+			'postcode' => '郵便番号',
+			'address' => '住所',
+			'phone_number' => '電話番号',
+			'email' => 'メールアドレス',
+			'password' => 'パスワード',
+			'password_comfirmation' => 'パスワード確認用',
 		];
 	}
 
@@ -60,17 +62,17 @@ class CreateMemberRequest extends FormRequest
 	public function messages()
 	{
 		return [
-			'member_name.required' => ':attributeは必須項目です。',
-			'member_name.max' => ':attributeは15文字以内で入力してください。',
-			'member_postcode.required' => ':attributeは必須項目です。',
-			'member_adress.required' => ':attributeは必須項目です。',
-			'member_phone.required' => ':attributeは必須項目です。',
-			'member_email.required' => ':attributeは必須項目です。',
-			'member_email.required' => ':attributeの入力値が不正です。',
-			'member_password.required' => ':attributeは必須項目です。',
-			'member_password.regex' => ':attributeはアルファベット大文字、小文字、数字、含む7文字以上で入力してください。',
-			'member_password_comfirm.required' => ':attributeは必須項目です。',
-			'member_password.confirmed' => 'パスワード確認用と入力値が異なります。',
+			'name.required' => ':attributeは必須項目です。',
+			'name.max' => ':attributeは15文字以内で入力してください。',
+			'postcode.required' => ':attributeは必須項目です。',
+			'adress.required' => ':attributeは必須項目です。',
+			'phone.required' => ':attributeは必須項目です。',
+			'email.required' => ':attributeは必須項目です。',
+			'email.required' => ':attributeの入力値が不正です。',
+			'password.required' => ':attributeは必須項目です。',
+			'password.regex' => ':attributeはアルファベット大文字、小文字、数字、含む7文字以上で入力してください。',
+			'password_comfirm.required' => ':attributeは必須項目です。',
+			'password.confirmed' => 'パスワード確認用と入力値が異なります。',
 		];
 	}
 }

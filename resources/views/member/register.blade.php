@@ -34,11 +34,11 @@
 			<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::password('password', ['placeholder' => 'パスワード', 'name' => 'password', 'class' => 'input_form']) }}
+			{{ Form::password('password', ['placeholder' => 'パスワード','id' => 'password', 'name' => 'password', 'class' => 'input_form']) }}
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">
-			{{ Form::password('password', ['placeholder' => 'パスワード確認用', 'name' => 'password_comfirm', 'class' => 'input_form']) }}
+			{{ Form::password('password', ['placeholder' => 'パスワード確認用','id' => 'password_confirmation', 'name' => 'password_confirmation', 'class' => 'input_form']) }}
 			<i class="fa fa-unlock-alt f13e" aria-hidden="true"></i>
 		</div>
 		<div class="inputs">

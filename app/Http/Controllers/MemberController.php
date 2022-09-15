@@ -14,7 +14,6 @@ class MemberController extends Controller
 			2 => '女性',
 			3 => 'どちらでもない',
 		];
-
 	}
 
 	public function register() {
@@ -28,16 +27,16 @@ class MemberController extends Controller
 
 	public function postRegiser(Request $request) {
 		$save_data = [
-			'member_name' => $request['member_name'],
-			'member_postcode' => $request['member_postcode'],
-			'member_adress' => $request['member_adress'],
-			'member_phone' => $request['member_phone'],
-			'member_email' => $request['member_email'],
-			'member_password' => $request['member_password'],
-			'member_gender' => $request['member_gender'],
+			'name' => $request['name'],
+			'postcode' => $request['postcode'],
+			'adress' => $request['adress'],
+			'phone_number' => $request['phone_number'],
+			'email' => $request['email'],
+			'password' => $request['password'],
+			'gender' => $request['gender'],
 			'prefecture_code' => $request['prefecture_code'],
 			'admin_flag' => !empty($request['admin_flag']) ? $request['admin_flag'] : 0,
-			'member_profile' => !empty($request['member_profile']) ? $request['member_profile'] : 'default_prof.jpeg',
+			'profile' => !empty($request['profile']) ? $request['profile'] : 'default_prof.jpeg',
 		];
 
 		$member = new Member();

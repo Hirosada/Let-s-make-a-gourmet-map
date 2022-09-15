@@ -22,7 +22,11 @@ Route::group(['middleware' => 'guest'], function() {
 	Route::get('/member/login', [MemberController::class, 'login']);
 });
 
-//ログインしないとアクセスできない画面
-Route::group(['middleware' => 'auth'], function () {
 
-});
+//ログインしないとアクセスできない画面
+// Route::group(['middleware' => 'auth'], function () {
+// 	Route::get('/post/register', 'PostController@register');
+// 	Route::post('/post/confirm', 'PostController@confirm')->name('confirm');
+// 	Route::post('/post/register', 'PostController@postregister')->name('post_regiser');
+// 	Route::get('/post/login', 'PostController@login');
+// });
